@@ -4,14 +4,14 @@ page_title: "civo_kubernetes_cluster Data Source - terraform-provider-civo"
 subcategory: ""
 description: |-
   Provides a Civo Kubernetes cluster data source.
-  Note: This data source returns a single Kubernetes cluster. When specifying a name, an error will be raised if more than one Kubernetes cluster found.
+  Note: This data source is designed to retrieve details about a specific Kubernetes cluster. However, if you provide a name and multiple Kubernetes clusters are found with the same name, an error will be raised. To ensure accurate results, please provide a unique and identifiable name for the desired Kubernetes cluster. If you are unsure about the name, you can list the available Kubernetes clusters to make an informed selection.
 ---
 
 # civo_kubernetes_cluster (Data Source)
 
 Provides a Civo Kubernetes cluster data source.
 
-Note: This data source returns a single Kubernetes cluster. When specifying a name, an error will be raised if more than one Kubernetes cluster found.
+Note: This data source returns a single Kubernetes cluster. When specifying a name, an error will be raised if more than one Kubernetes cluster found.To ensure accurate results, please provide a unique and identifiable name for the desired Kubernetes cluster. If you are unsure about the name, you can list the available Kubernetes clusters to make an informed selection.
 
 ## Example Usage
 
@@ -68,9 +68,9 @@ Read-Only:
 
 Read-Only:
 
-- **id** (String)
-- **instance_names** (Set of String)
-- **node_count** (Number)
-- **size** (String)
+-->  **id** (String)
+-->  **instance_names** (Set of String)
+-->  **node_count** (Number)
+-->  **size** (String)
 
 
